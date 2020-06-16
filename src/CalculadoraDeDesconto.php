@@ -8,13 +8,14 @@ use Alura\DesignPattern\Descontos\SemDesconto;
 
 class CalculadoraDeDesconto
 {
-    public function calcula(Orcamento $orcamento): float
+    public function calcula(Orcamento $orcamento) : float
     {
-        $cadeiaDeDesconto = new DescontoMaisDe5Itens(
-            new DescontoMaisDe500Reais(
-                new SemDesconto()
-            )
-        );
+        $cadeiaDeDesconto =
+            new DescontoMaisDe5Itens(
+                new DescontoMaisDe500Reais(
+                    new SemDesconto()
+                )
+            );
 
         return $cadeiaDeDesconto->calcula($orcamento);
     }
