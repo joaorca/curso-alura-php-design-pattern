@@ -2,7 +2,7 @@
 
 ## Comportamentais
 
-1. Strategy
-2. Chain of Responsibility
-3. Template Method
-4. State
+1. Strategy (Impostos)
+2. Chain of Responsibility (Descontos)
+3. Template Method (Imposto com 2 Aliquotas)
+4. State (Estados Orçamentos)
