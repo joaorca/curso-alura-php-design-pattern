@@ -20,11 +20,10 @@ $orcamento3->valor = 1350;
 $orcamento3->aprova();
 $orcamento3->finaliza();
 
-$listaOrcamento = [
-    $orcamento1,
-    $orcamento2,
-    $orcamento3
-];
+$listaOrcamento = new \Alura\DesignPattern\ListaDeOrcamentos();
+$listaOrcamento->addOrcamento($orcamento1);
+$listaOrcamento->addOrcamento($orcamento2);
+$listaOrcamento->addOrcamento($orcamento3);
 
 foreach ($listaOrcamento as $orcamento) {
     echo "Valor: " . $orcamento->valor . PHP_EOL;
