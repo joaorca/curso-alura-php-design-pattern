@@ -15,7 +15,7 @@ $nomeCliente = $argv[3];
 
 $gerarPedidoCommand = new GerarPedidoCommand($valorOrcamento, $numeroDeItens, $nomeCliente);
 $gerarPedidoHandler = new GerarPedidoHandler();
-$gerarPedidoHandler->attach(new CriarPedidoNoBanco());
-$gerarPedidoHandler->attach(new EnviarPedidoPorEmail());
-$gerarPedidoHandler->attach(new LogGerarPedido());
+$gerarPedidoHandler->adicionarAcao(new CriarPedidoNoBanco());
+$gerarPedidoHandler->adicionarAcao(new EnviarPedidoPorEmail());
+$gerarPedidoHandler->adicionarAcao(new LogGerarPedido());
 $gerarPedidoHandler->execute($gerarPedidoCommand);
