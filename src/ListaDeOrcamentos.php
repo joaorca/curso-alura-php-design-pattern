@@ -15,9 +15,4 @@ class ListaDeOrcamentos
     {
         $this->orcamentos[] = $orcamento;
     }
-
-    public function orcamentos() : array
-    {
-        return $this->orcamentos;
-    }
 }
