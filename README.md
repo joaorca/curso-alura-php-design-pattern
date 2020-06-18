@@ -8,3 +8,4 @@
 4. State (Estados Orçamentos)
 5. Command (Pedido)
 6. Observer (Ações ao Gerar Pedido)
+7. Iterator (Lista de Orçamentos)
