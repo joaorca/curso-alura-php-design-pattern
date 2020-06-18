@@ -1,5 +1,8 @@
 <?php
 
+use Alura\DesignPattern\AcoesAoGerarPedido\CriarPedidoNoBanco;
+use Alura\DesignPattern\AcoesAoGerarPedido\EnviarPedidoPorEmail;
+use Alura\DesignPattern\AcoesAoGerarPedido\LogGerarPedido;
 use Alura\DesignPattern\GerarPedidoCommand;
 use Alura\DesignPattern\GerarPedidoHandler;
 
@@ -10,6 +13,9 @@ $valorOrcamento = $argv[1];
 $numeroDeItens = $argv[2];
 $nomeCliente = $argv[3];
 
-$gerarPedido = new GerarPedidoCommand($valorOrcamento, $numeroDeItens, $nomeCliente);
+$gerarPedidoCommand = new GerarPedidoCommand($valorOrcamento, $numeroDeItens, $nomeCliente);
 $gerarPedidoHandler = new GerarPedidoHandler();
-$gerarPedidoHandler->execute($gerarPedido);
+$gerarPedidoHandler->adicionarAcao(new CriarPedidoNoBanco());
+$gerarPedidoHandler->adicionarAcao(new EnviarPedidoPorEmail());
+$gerarPedidoHandler->adicionarAcao(new LogGerarPedido());
+$gerarPedidoHandler->execute($gerarPedidoCommand);
