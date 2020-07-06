@@ -9,3 +9,7 @@
 5. Command (Pedido)
 6. Observer (Ações ao Gerar Pedido)
 7. Iterator (Lista de Orçamentos)
+
+## Estruturais
+
+1. Adapter (Registro de Orçamento)
