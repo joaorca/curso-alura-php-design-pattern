@@ -14,3 +14,4 @@
 
 1. Adapter (Registro de Orçamento)
 2. Bridge (Relatorios)
+3. Decorator (Impostos)
