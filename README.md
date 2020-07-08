@@ -16,3 +16,4 @@
 2. Bridge (Relatorios)
 3. Decorator (Impostos)
 4. Composite (ItemOrcamento)
+5. Facade (Log de Desconto)
