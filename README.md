@@ -17,3 +17,4 @@
 3. Decorator (Impostos)
 4. Composite (ItemOrcamento)
 5. Facade (Log de Desconto)
+6. Proxy (Cache)
